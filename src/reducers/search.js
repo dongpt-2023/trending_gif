@@ -1,13 +1,14 @@
 import * as Types from '../constants/ActionTypes';
 
-const initalState = [];
+const initalState = {
+  key: 'trending',
+  isSearching: false,
+};
 
 const reducer = (state = initalState, action) => {
   switch (action.type) {
-    case Types.FETCH_TRENDING:
-      return action.trendings;
-    case Types.UPDATE_TRENDING:
-      return action.data;
+    case Types.SEARCH_GIF:
+      return { ...state, key: action.key, isSearching: true };
     default:
       return state;
   }

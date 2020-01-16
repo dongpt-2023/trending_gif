@@ -20,13 +20,11 @@ function listComponentRouter(routes) {
   );
 }
 
-function App() {
+export default () => {
   return (
     <Provider store={store}>
       <Router>
-        <div className="App">
-          <Menus />
-        </div>
+        <Menus />
         {/* content */}
         <div>
           <Switch>
@@ -37,5 +35,3 @@ function App() {
     </Provider>
   );
 }
-
-export default App;

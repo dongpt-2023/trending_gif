@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import SearchForm from './search';
+import SearchForm from '../../containers/SearchContainer';
 import ListTrending from './ListTrending';
 
 export default class index extends Component {
