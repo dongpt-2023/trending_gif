@@ -6,7 +6,8 @@ export default function getTrending() {
       limit: 20,
       rating: 'PG',
     },
-  }).catch((error) => {
-        console.log(error);
+  }).then((res) => res.data.data)
+    .catch((error) => {
+      console.log(error);
     });
 }
